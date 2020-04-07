@@ -14,6 +14,6 @@ Building the example with tail call optimization enabled shows how the stack can
 
 ```shell
 make
-./basic-no-opt
-./basic-opt
+./stack-trace-no-opt
+./stack-trace-opt
 ```
