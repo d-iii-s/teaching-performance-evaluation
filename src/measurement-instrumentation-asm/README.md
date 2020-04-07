@@ -1,6 +1,6 @@
 # Manipulating Java Bytecode with ASM
 
-## Class printing with ASM.
+## Class printing
 
 The `Printer` class shows how the ASM visitor API can be used to print class information.
 The `visit` and `visitEnd` methods are executed for each class visited.
@@ -12,7 +12,7 @@ mvn compile
 mvn exec:java@printer
 ```
 
-## Class generation with ASM
+## Class generation
 
 Two examples that both generate the same `Example` class:
 
