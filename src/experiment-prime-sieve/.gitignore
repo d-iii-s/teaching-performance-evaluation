@@ -1,4 +1,7 @@
 *.csv
-measure-rdtsc
-measure-rdtscp-empty
-measure-rdtscp-yield
+basic
+checked-basic
+bitmap
+checked-bitmap
+smart
+checked-smart
