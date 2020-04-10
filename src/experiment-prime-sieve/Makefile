@@ -5,7 +5,7 @@
 MAKEFLAGS += --no-builtin-rules --no-builtin-variables
 
 CC = g++
-CC_OPTS = -std=c++11 -g -O3 -Wall -Wextra -Werror
+CC_OPTS = $(CXXFLAGS) -std=c++11 -g -O3 -Wall -Wextra -Werror
 
 # Files
 

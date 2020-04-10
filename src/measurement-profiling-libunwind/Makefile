@@ -5,7 +5,7 @@
 MAKEFLAGS += --no-builtin-rules --no-builtin-variables
 
 CC = gcc
-CC_OPTS = -g -Wall -Wextra -Werror -lunwind
+CC_OPTS = $(CFLAGS) -g -Wall -Wextra -Werror -lunwind
 
 # Files
 
