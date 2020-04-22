@@ -1,0 +1,6 @@
+double-free-heap
+invalid-free-stack
+leak-heap
+use-after-free-heap
+use-after-free-stack
+write-past-end-heap
