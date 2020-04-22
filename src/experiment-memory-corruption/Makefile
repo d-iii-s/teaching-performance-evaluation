@@ -5,7 +5,7 @@
 MAKEFLAGS += --no-builtin-rules --no-builtin-variables
 
 CC = gcc
-CC_OPTS = $(CFLAGS) -g -O0 -Wall -Wextra -Werror -Wno-return-local-addr
+CC_OPTS = $(CFLAGS) -g -O0 -Wall -Wextra -Werror -Wno-return-local-addr -Wno-free-nonheap-object
 
 # Files
 
