@@ -26,6 +26,6 @@ A minimum plot in R with CSV header `count,time,version`:
 
 ```r
 library ('tidyverse')
-x <- read_csv ('<file>.csv')
+x <- read_csv ('<file>.csv', col_names = c ('count', 'time', 'version'))
 ggplot (x, aes (x = count, y = time, color = version)) + geom_point ()
 ```

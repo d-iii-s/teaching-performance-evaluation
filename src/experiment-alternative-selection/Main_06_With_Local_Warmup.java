@@ -22,7 +22,6 @@ public class Main_06_With_Local_Warmup {
 		test (new BenchImpl2 ());
 		long time2 = test (new BenchImpl2 ());
 
-		System.out.println ("count,time,version");
 		System.out.println (N + "," + time1 + ",one");
 		System.out.println (N + "," + time2 + ",two");
 	}
