@@ -10,5 +10,8 @@ The script was tested with Fedora 31.
 Once compiled, place the plugin in the current directory or on `LD_LIBRARY_PATH` and use:
 
 ```shell
-java -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly -XX:PrintAssemblyOptions=hsdis-print-bytes ...
+java -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly MainClass
+java -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=print,Class.method MainClass
 ```
+
+Add `-XX:PrintAssemblyOptions=help` to see additional disassembly configuration switches.
