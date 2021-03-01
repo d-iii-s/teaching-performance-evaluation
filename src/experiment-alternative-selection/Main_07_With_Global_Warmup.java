@@ -22,7 +22,7 @@ public class Main_07_With_Global_Warmup {
 		long time1 = test (new BenchImpl1 ());
 		long time2 = test (new BenchImpl2 ());
 
-		System.out.println ('count,time,version');
+		System.out.println ("count,time,version");
 		System.out.println (N + "," + time1 + ",one");
 		System.out.println (N + "," + time2 + ",two");
 	}
