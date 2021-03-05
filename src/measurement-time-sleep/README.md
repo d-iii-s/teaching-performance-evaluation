@@ -21,8 +21,8 @@ A minimum plot in R:
 
 ```r
 library ('tidyverse')
-x <- read_csv ('<file>.csv')
-ggplot (x, aes (x = sleep, y = time)) + geom_point ()
+data <- read_csv ('<file>.csv')
+ggplot (data, aes (x = sleep, y = time)) + geom_point () + geom_abline (intercept = 0, slope = 1, linetype = 'dotted')
 ```
 
 Note the difference between `sleep-short-simple` and `sleep-short-random`.
