@@ -1,0 +1,5 @@
+papi-counters-o[0-3]
+native-counters-o[0-3]
+multiplexed-counters-o[0-3]
+measure-clock-overheads-o[0-3]
+measure-cycle-frequency-o[0-3]
