@@ -9,8 +9,9 @@ class RelativeMillitime {
             results [i] = System.currentTimeMillis ();
         }
 
+        System.out.println ("index,time");
         for (int i = 0 ; i < COUNT ; i ++) {
-            System.out.println (results [i] - results [0]);
+            System.out.println (i + "," + (results [i] - results [0]));
         }
     }
 }

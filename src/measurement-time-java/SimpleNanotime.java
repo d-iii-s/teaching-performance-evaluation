@@ -9,8 +9,9 @@ class SimpleNanotime {
             results [i] = System.nanoTime ();
         }
 
+        System.out.println ("index,time");
         for (int i = 0 ; i < COUNT ; i ++) {
-            System.out.println (results [i]);
+            System.out.println (i + "," + results [i]);
         }
     }
 }
