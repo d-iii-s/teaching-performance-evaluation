@@ -114,6 +114,7 @@ JNIEXPORT jint JNICALL Agent_OnLoad (JavaVM *vm, char *options, void *reserved) 
     callbacks.GarbageCollectionFinish = &gc_finish;
     jvmti->SetEventCallbacks (&callbacks, sizeof (callbacks));
 
+    // Event notification can be per thread or global if no thread provided.
     jvmti->SetEventNotificationMode (JVMTI_ENABLE, JVMTI_EVENT_VM_INIT, (jthread) NULL);
     jvmti->SetEventNotificationMode (JVMTI_ENABLE, JVMTI_EVENT_VM_START, (jthread) NULL);
     jvmti->SetEventNotificationMode (JVMTI_ENABLE, JVMTI_EVENT_VM_DEATH, (jthread) NULL);

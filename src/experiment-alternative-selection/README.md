@@ -22,7 +22,7 @@ There are multiple experiment implementations, each can run separately, each wit
 - `Main_06_With_Local_Warmup` executes warm up iterations before each measurement.
 - `Main_07_With_Global_Warmup` executes warm up iterations before both measurements.
 
-A minimum plot in R with CSV header `count,time,version`:
+A minimum plot in R with CSV columns `count,time,version`:
 
 ```r
 library ('tidyverse')
