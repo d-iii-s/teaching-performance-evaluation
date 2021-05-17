@@ -1,0 +1,58 @@
+---
+title: "Normality Convergence for Independent Samples"
+output: html_notebook
+---
+
+The notebook demonstrates how sums of random variables of various distributions
+converge to the normal distribution when the samples are independent.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library ('tidyverse')
+
+SUMS <- c (1, 2, 3, 5, 10, 20, 50, 100)
+SAMPLES <- 1000
+DEPENDENCY <- 0.9
+
+sample_with_dependency <- function (data, sample_size) {
+    sample <- data [sample.int (length (data), sample_size + 1)]
+    for (index in seq_len (sample_size)) {
+        sample [index+1] <- sample [index] * DEPENDENCY + sample [index+1] * (1 - DEPENDENCY)
+    }
+    return (sample [seq_len (sample_size)])
+}
+
+show_sums_dependent <- function (data) {
+    samples <- bind_rows (
+        map (SUMS, function (sum_size)
+            tibble (
+                size = sum_size,
+                sample = replicate (SAMPLES,
+                    sum (sample_with_dependency (data, sum_size))
+                )
+            )
+        )
+    )
+
+    ggplot (samples) +
+        geom_histogram (aes (x = sample), bins = 33) +
+        facet_wrap (facets = vars (size), scales = 'free')
+}
+```
+
+# Normal Distribution
+
+```{r, echo = FALSE}
+show_sums_dependent (rnorm (SAMPLES))
+```
+
+# Uniform Distribution
+
+```{r, echo = FALSE}
+show_sums_dependent (runif (SAMPLES))
+```
+
+# Exponential Distribution
+
+```{r, echo = FALSE}
+show_sums_dependent (rexp (SAMPLES))
+```
