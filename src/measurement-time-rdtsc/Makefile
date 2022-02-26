@@ -5,7 +5,7 @@
 MAKEFLAGS += --no-builtin-rules --no-builtin-variables
 
 CC = g++
-CC_OPTS = -std=c++11 -g -Wall -Wextra -Werror -lpthread
+CC_OPTS = -std=c++11 -g -Ofast -Wall -Wextra -Werror
 
 # Files
 

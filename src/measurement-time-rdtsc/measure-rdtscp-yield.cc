@@ -1,5 +1,5 @@
+#include <sched.h>
 #include <stdint.h>
-#include <pthread.h>
 
 #include <iostream>
 
@@ -20,7 +20,7 @@ inline void rdtscp (uint64_t *clock, uint32_t *magic) {
 int main (void) {
     std::cout << "index,time,magic" << std::endl;
     for (int i = 0 ; i < CYCLES ; i ++) {
-        pthread_yield ();
+        sched_yield ();
         rdtscp (&clock_array [i], &magic_array [i]);
     }
     for (int i = 0 ; i < CYCLES ; i ++) std::cout << i << "," << clock_array [i] << "," << magic_array [i] << std::endl;
