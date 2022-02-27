@@ -8,6 +8,7 @@ This requires [Python Poetry](https://python-poetry.org) and also installs the R
 
 ```shell
 poetry install
-poetry run Rscript -e 'install.packages ("IRkernel") ; IRkernel::installspec ()'
+poetry run Rscript -e 'install.packages ("IRkernel")'
+poetry run Rscript -e 'IRkernel::installspec ()'
 poetry run jupyter lab
 ```
