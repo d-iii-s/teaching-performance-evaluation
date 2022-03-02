@@ -1,5 +1,3 @@
-const { PerformanceObserver, performance } = require ('perf_hooks');
-
 const COUNT = 100000;
 let results = new Array (COUNT);
 
