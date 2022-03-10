@@ -35,13 +35,13 @@ static void summarize_heap_loaded_classes (jvmtiEnv *jvmti) {
 
     // Get the list of all loaded classes.
     jint count;
-    jclass * classes;
+    jclass *classes;
     jvmti->GetLoadedClasses (&count, &classes);
 
     // Do a heap traversal for each class to count the number of allocated instances.
     // The traversal is limited to tagged objects, the agent tags on JVM object allocation.
     for (int i = 0 ; i < count ; i++) {
-        char * signature;
+        char *signature;
         jvmti->GetClassSignature (classes [i], &signature, NULL);
         long counter = 0;
         jvmti->IterateThroughHeap (JVMTI_HEAP_FILTER_TAGGED, classes [i], &heapCallbacks, &counter);

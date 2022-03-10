@@ -9,7 +9,7 @@ CC_OPTS = -std=c++11 -O2 -g -Wall -Wextra -Werror -Wno-unused-parameter -I${JAVA
 
 # Files
 
-ALL_EX = libheaplivesize.so libvmallocations.so
+ALL_EX = libcompilation.so libheaplivesize.so libvmallocations.so
 
 # Rules
 
