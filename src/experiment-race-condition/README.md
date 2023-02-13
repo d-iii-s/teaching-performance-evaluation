@@ -22,6 +22,6 @@ With `valgrind` `helgrind` tool:
 
 ```shell
 make
-valgrind ./possible-deadlock
-valgrind ./racing-variable-access
+valgrind --tool=helgrind ./possible-deadlock
+valgrind --tool=helgrind ./racing-variable-access
 ```
