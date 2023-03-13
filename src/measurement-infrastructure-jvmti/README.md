@@ -4,9 +4,9 @@
 
 ```shell
 make
-java -agentpath:./compilation.so -version
-java -agentpathlib:./heaplivesize.so -version
-java -agentpathlib:./vmallocations.so -version
+java -agentpath:./libcompilation.so -version
+java -agentpath:./libheaplivesize.so -version
+java -agentpath:./libvmallocations.so -version
 ```
 
 Or run any application in place of the `version` argument.

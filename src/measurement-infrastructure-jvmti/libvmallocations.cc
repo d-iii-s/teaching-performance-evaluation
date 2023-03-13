@@ -108,8 +108,11 @@ JNIEXPORT jint JNICALL Agent_OnLoad (JavaVM *vm, char *options, void *reserved) 
 
     // Get JVMTI environment.
     jvmtiEnv *jvmti;
-    jint rc = vm->GetEnv ((void**)(&jvmti), JVMTI_VERSION);
-    if (rc != JNI_OK) return (-1);
+    jint rc = vm->GetEnv ((void**)(&jvmti), JVMTI_VERSION_1_0);
+    if (rc != JNI_OK) {
+        printf ("[ONLOAD] Failed to GetEnv\n");
+        return (-1);
+    }
 
     jvmtiCapabilities capabilities;
     memset (&capabilities,0, sizeof (capabilities));
@@ -121,7 +124,10 @@ JNIEXPORT jint JNICALL Agent_OnLoad (JavaVM *vm, char *options, void *reserved) 
     capabilities.can_generate_garbage_collection_events = 1;
 
     jvmtiError err = jvmti->AddCapabilities (&capabilities);
-    if (err != JVMTI_ERROR_NONE) return (-1);
+    if (err != JVMTI_ERROR_NONE) {
+        printf ("[ONLOAD] Failed to AddCapabilities\n");
+        return (-1);
+    }
 
     // Set callbacks and enable event notifications
     jvmtiEventCallbacks callbacks;
