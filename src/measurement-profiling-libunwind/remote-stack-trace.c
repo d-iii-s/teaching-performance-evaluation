@@ -16,6 +16,7 @@ void print_stack (pid_t pid) {
     char name [256];
     unw_word_t offset;
 
+    # The UPT accessors are functions for accessing thread state through ptrace.
     address_space = unw_create_addr_space (&_UPT_accessors, 0);
     remote_context = _UPT_create (pid);
     int init_remote_status = unw_init_remote (&cursor, address_space, remote_context);

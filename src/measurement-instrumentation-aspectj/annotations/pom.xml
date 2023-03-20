@@ -13,7 +13,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <aspectj.version>1.9.9.1</aspectj.version>
+        <aspectj.version>1.9.19</aspectj.version>
         <project.build.sourceEncoding>utf8</project.build.sourceEncoding>
     </properties>
 
@@ -65,6 +65,8 @@
                         <argument>-classpath</argument>
                         <classpath/>
                         <argument>-javaagent:${org.aspectj:aspectjweaver:jar}</argument>
+                        <argument>--add-opens</argument>
+                        <argument>java.base/java.lang=ALL-UNNAMED</argument>
                         <argument>Main</argument>
                     </arguments>
                 </configuration>
