@@ -26,3 +26,9 @@ library ('tidyverse')
 x <- read_csv ('<file>.csv')
 ggplot (x, aes (x = index, y = time)) + geom_point ()
 ```
+
+## Trivia
+
+Note that the precision provided by `Performance.now ()`
+may depend on script site properties, see the documentation
+for [`crossOriginIsolated`](https://developer.mozilla.org/en-US/docs/Web/API/crossOriginIsolated).

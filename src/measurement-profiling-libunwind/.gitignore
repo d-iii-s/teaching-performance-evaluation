@@ -1,2 +1,3 @@
-stack-trace-opt
-stack-trace-no-opt
+local-stack-trace-no-opt
+local-stack-trace-opt
+remote-stack-trace
