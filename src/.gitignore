@@ -1,0 +1,6 @@
+# Typical output files
+*.csv
+*.json
+perf.data
+perf.data.old
+perf.data.java
