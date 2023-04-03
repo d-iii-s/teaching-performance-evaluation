@@ -17,3 +17,13 @@ make
 ./stack-trace-no-opt
 ./stack-trace-opt
 ```
+
+The example also illustrates the interaction of tail call optimization and profiling.
+
+```shell
+CFLAGS=-pg make clean all
+./stack-trace-no-opt
+gprof ./stack-trace-no-opt
+./stack-trace-opt
+gprof ./stack-trace-opt
+```
