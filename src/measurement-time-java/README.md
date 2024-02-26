@@ -66,3 +66,8 @@ x %>% distinct (delta) %>% arrange (delta) %>% pull (delta)
  [21]     44     45     46     47     48     49     50     51     52     53
 ...
 ```
+
+## Trivia
+
+Adding `-XX:+UnlockDiagnosticVMOptions` and `-XX:+PrintCompilation` and `-XX:+PrintAssembly` shows the runtime compilation activity.
+The [hsdis plugin](https://blogs.oracle.com/javamagazine/post/java-hotspot-hsdis-disassembler) must be present otherwise the output is not complete.

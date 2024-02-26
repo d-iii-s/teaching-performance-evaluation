@@ -1,0 +1,8 @@
+*.o
+*.dep
+client
+server
+clock.pb.h
+clock.pb.cc
+clock.grpc.pb.h
+clock.grpc.pb.cc

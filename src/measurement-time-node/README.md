@@ -27,6 +27,8 @@ x <- read_csv ('<file>.csv')
 ggplot (x, aes (x = index, y = time)) + geom_point ()
 ```
 
+Adding `-trace-opt` and `-print-opt-code` shows the runtime compilation activity.
+
 ## Trivia
 
 Note that the precision provided by `Performance.now ()`

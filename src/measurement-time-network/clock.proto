@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+message Stamp {
+    uint64 time = 1;
+}
+
+service ClockService {
+    rpc GetTime (google.protobuf.Empty) returns (Stamp) { }
+}
