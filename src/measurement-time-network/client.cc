@@ -11,7 +11,7 @@ using namespace grpc;
 #include "shared.h"
 
 
-#define CYCLES 100000
+#define CYCLES 10000
 
 
 uint64_t local_clock_array [CYCLES];
