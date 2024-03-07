@@ -6,8 +6,8 @@ authors = ["Petr Tuma <petr.tuma@d3s.mff.cuni.cz>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-jupyterlab = "^3.2.9"
-jupytext = "^1.13.7"
+jupyterlab = "^4.1.3"
+jupytext = "^1.16.1"
 
 [tool.poetry.dev-dependencies]
 
