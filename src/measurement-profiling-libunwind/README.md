@@ -14,16 +14,15 @@ Building the example with tail call optimization enabled shows how the stack can
 
 ```shell
 make
-./stack-trace-no-opt
-./stack-trace-opt
+./local-stack-trace-no-opt
+./local-stack-trace-opt
 ```
 
-The example also illustrates the interaction of tail call optimization and profiling.
+Note how a sampling based profiler would report the squashed stack
+while an instrumentation based profiler would report the true call tree.
 
 ```shell
 CFLAGS=-pg make clean all
-./stack-trace-no-opt
-gprof ./stack-trace-no-opt
 ./stack-trace-opt
 gprof ./stack-trace-opt
 ```
