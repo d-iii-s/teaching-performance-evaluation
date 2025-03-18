@@ -9,7 +9,7 @@ CC_OPTS = $(CXXFLAGS) -std=c++11 -Wall -Wextra -Werror -lpapi
 
 # Files
 
-ALL_EX = papi-counters native-counters multiplexed-counters measure-cycle-frequency measure-clock-overheads
+ALL_EX = list-counters papi-counters native-counters multiplexed-counters measure-cycle-frequency measure-clock-overheads list-counters
 ALL_O0 = $(addsuffix -o0, $(ALL_EX))
 ALL_O1 = $(addsuffix -o1, $(ALL_EX))
 ALL_O2 = $(addsuffix -o2, $(ALL_EX))
