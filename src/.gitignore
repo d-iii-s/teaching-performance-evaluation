@@ -1,3 +1,9 @@
+# Typical workspace files
+.project
+.settings
+.classpath
+.factorypath
+
 # Typical output files
 *.csv
 *.json
