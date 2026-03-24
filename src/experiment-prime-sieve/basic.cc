@@ -5,12 +5,12 @@
     #define N (1 << 27)
 #endif
 
-bool can_be_prime[N];
+bool can_be_prime [N];
 
 int main () {
 
     // Mark all numbers as potentially prime.
-    for (int i = 2; i < N; i++) {
+    for (int i = 2 ; i < N ; i++) {
         can_be_prime [i] = true;
     }
 
