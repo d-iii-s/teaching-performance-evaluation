@@ -1,9 +1,11 @@
 #include <pin.H>
 
-int call_count = 0;
+#include <atomic>
+
+std::atomic<int> call_count (0);
 
 void increment_count () {
-    ATOMIC::OPS::Increment (&call_count, 1);
+    call_count ++;
 }
 
 void instrument_routine (RTN routine, VOID *val) {
