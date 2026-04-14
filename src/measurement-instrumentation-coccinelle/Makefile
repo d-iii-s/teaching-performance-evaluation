@@ -14,6 +14,8 @@ CC_OPTS = $(CXXFLAGS) -std=c++11 -g -O3 -Wall -Wextra -Werror
 ALL_PT = example.patched.c
 ALL_EX = example.patched
 
+.PRECIOUS: $(ALL_PT)
+
 # Rules
 
 all: $(ALL_EX)
