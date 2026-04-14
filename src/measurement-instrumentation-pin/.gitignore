@@ -1,0 +1,3 @@
+trace-*.asm
+trace-*.bin
+obj-intel64/
